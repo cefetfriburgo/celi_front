@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- <script src="https://unpkg.com/@popperjs/core@2" defer></script> -->
+    <!-- <script src="js/bootstrap.bundle.js" defer></script> -->
+    <script src="/js/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Celi - Início
+</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<header>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="/img/celi.png" alt="Logo"
+                     class="imageWidth d-inline-block align-text-top">
+            </a>
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+               aria-controls="offcanvasExample">
+                <i class="bi bi-list fs-4"></i>
+            </a>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        
+            <!-- DESCRIÇÃO -->
+            <div class="row bg-body-tertiary rounded my-3 py-3 d-flex align-items-center">
+                <img class="col col-12 col-lg-7" src="img/celi.png" alt="Logo do CELi">
+                <p class="col col-12 col-lg-5 fs-5 m-0 text-center">
+                    Intitulado Centro de Educação e Linguagens, o CELi é
+                    um Programa de Extensão do CEFET/RJ campus Nova Friburgo que está em funcionamento ininterrupto no
+                    campus desde 2009 até hoje!
+                </p>
+            </div>
+
+            <!-- CURSOS -->
+            <div class="row bg-body-tertiary rounded my-3 py-3">
+                <div>
+                    <h5>Acesse nossos cursos!</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nostrum doloribus aliquam
+                        perspiciatis porro culpa quibusdam obcaecati quidem aspernatur. Neque corporis libero
+                        perspiciatis
+                        molestias odio rerum illo quam architecto amet.</p>
+                    <a href="/cursos" class="btn btn-primary">Veja mais</a>
+                </div>
+            </div>
+
+            <!-- CAROUSEL -->
+            <div class="row bg-body-tertiary rounded my-3 py-3">
+
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/CEFET_NovaFriburgo.jpg" class="d-block w-100 rounded" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/CEFET_NovaFriburgo.jpg" class="d-block w-100 rounded" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/CEFET_NovaFriburgo.jpg" class="d-block w-100 rounded" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- NOTÍCIAS -->
+            <div class="row bg-body-tertiary rounded my-3 py-3">
+                <div class="col-12">
+                    <div class="mb-2">
+                        <h5>Notícias</h5>
+                        <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolores voluptate
+                            reiciendis maiores numquam nam optio qui dolor velit cum, deleniti ducimus molestias
+                            provident
+                            nesciunt eveniet vero culpa. Dicta, dolore.</p>
+                    </div>
+
+                    
+                </div>
+            </div>
+    </div>
+    <!-- MENU LATERAL -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <p class="m-0">Menu</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="dropdown mt-3">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="/eventos" class="nav-link">Eventos</a></li>
+                    <li class="nav-item"><a href="/comoParticipar" class="nav-link">Como participar</a></li>
+                    <li class="nav-item"><a href="/contatos" class="nav-link">Contatos</a></li>
+                    <li class="nav-item"><a href="/sobreNos" class="nav-link">Sobre nós</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+</footer>
+</body>
+
+</html>
