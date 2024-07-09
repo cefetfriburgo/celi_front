@@ -1,0 +1,29 @@
+.lista-atividades{
+    max-width: 75%;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+.atividade{
+    background-color: gray;
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.texto-atividade{
+    max-width: 85%;
+}
+.texto-atividade *{
+    color: white;
+}
+.ferramentas{
+    width: 10%;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+.ferramentas *{
+    box-sizing: border-box;
+}
