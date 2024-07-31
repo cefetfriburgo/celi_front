@@ -5,10 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: rgb(240, 240, 240);
+    background-color: white;
 }
 .content{
-    padding: 50px;
+    padding: 10px 50px;
 }
 .mb{
     margin-bottom: 5px;
@@ -21,7 +21,7 @@ button{
     border: 2px solid rgb(0, 74, 117);
     padding: 8px;
     border-radius: 15px;
-    transition: ease 0.5s;
+    transition: ease 0.3s;
 }
 button:hover{
     background-color: white;
@@ -45,4 +45,7 @@ ul{
 }
 li{
     margin-bottom: 4px;
+}
+a{
+    color: black;
 }
