@@ -1,0 +1,40 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "teste",
+        "email": "nome@gmail.com",
+        "email_verified_at": null,
+        "two_factor_confirmed_at": null,
+        "current_team_id": null,
+        "profile_photo_path": null,
+        "created_at": "2024-07-18T00:19:03.000000Z",
+        "updated_at": "2024-07-18T00:19:03.000000Z",
+        "profile_photo_url": "https://ui-avatars.com/api/?name=t&color=7F9CF5&background=EBF4FF"
+      },
+      {
+        "id": 2,
+        "name": "teste",
+        "email": "teste@gmail.com",
+        "email_verified_at": null,
+        "two_factor_confirmed_at": null,
+        "current_team_id": null,
+        "profile_photo_path": null,
+        "created_at": "2024-07-18T00:24:15.000000Z",
+        "updated_at": "2024-07-18T00:24:15.000000Z",
+        "profile_photo_url": "https://ui-avatars.com/api/?name=t&color=7F9CF5&background=EBF4FF"
+      },
+      {
+        "id": 3,
+        "name": "jon",
+        "email": "jon@gmail.com",
+        "email_verified_at": null,
+        "two_factor_confirmed_at": null,
+        "current_team_id": null,
+        "profile_photo_path": null,
+        "created_at": "2024-08-01T15:00:33.000000Z",
+        "updated_at": "2024-08-01T15:00:33.000000Z",
+        "profile_photo_url": "https://ui-avatars.com/api/?name=j&color=7F9CF5&background=EBF4FF"
+      }
+    ]
+  }
