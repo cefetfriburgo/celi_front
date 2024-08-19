@@ -23,6 +23,8 @@ background-color: #005b6e;
 
     width: 20vw;
     height: 40vh;
+
+    border-radius: 10px;
 }
 
 .formularioLabel {
@@ -31,7 +33,9 @@ background-color: #005b6e;
 }
 
 .formularioInput {
-    width: 100%;
+    width: 90%;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .formularioBotao {
