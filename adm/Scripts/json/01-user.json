@@ -2,8 +2,8 @@
     "users": [
       {
         "id": 1,
-        "name": "teste",
-        "email": "nome@gmail.com",
+        "name": "carlos",
+        "email": "carlos@gmail.com",
         "email_verified_at": null,
         "two_factor_confirmed_at": null,
         "current_team_id": null,
@@ -14,8 +14,8 @@
       },
       {
         "id": 2,
-        "name": "teste",
-        "email": "teste@gmail.com",
+        "name": "julio",
+        "email": "julia@gmail.com",
         "email_verified_at": null,
         "two_factor_confirmed_at": null,
         "current_team_id": null,
@@ -26,8 +26,8 @@
       },
       {
         "id": 3,
-        "name": "jon",
-        "email": "jon@gmail.com",
+        "name": "ana",
+        "email": "ana@gmail.com",
         "email_verified_at": null,
         "two_factor_confirmed_at": null,
         "current_team_id": null,
