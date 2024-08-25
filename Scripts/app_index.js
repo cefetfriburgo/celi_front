@@ -1,5 +1,5 @@
-import {rendeizarHome} from './views/home.js';
-import {rendeizarPage} from './views/page.js'
+import {rendeizarHome} from './view_index/home.js';
+import {rendeizarPage} from './view_index/page.js';
 
 const content = document.querySelector(".content");
 const linkHome = document.querySelector("#botaoHome");
