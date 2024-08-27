@@ -1,0 +1,18 @@
+{
+    "id": 1,
+    "nome": "Atividade 01",
+    "realizador_id": 1,
+    "descricao": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam a corporis possimus alias aliquid magnam sit! Nisi explicabo minima provident quod iusto saepe pariatur distinctio, quo id libero officiis quos.",
+    "status": "Em avaliação",
+    "objetivo": "teste",
+    "foco_inclusao": 0,
+    "limite_participantes": 50,
+    "metodologia_id": 1,
+    "publico_alvo_id": 1,
+    "endereco_id": 1,
+    "categoria_id": 1,
+    "area_tematica_id": 1,
+    "linha_extensao_id": 1,
+    "created_at": "2024-08-01T15:18:45.000000Z",
+    "updated_at": "2024-08-01T15:18:45.000000Z"
+}
