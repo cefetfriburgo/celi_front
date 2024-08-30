@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style.css">
+    <title>Formulário de Cadastro de Atividade</title>
+</head>
+<body>
+    <div class="activity-form">
+        <div class="activity-input">
+            <label for="activity-name">Nome da Atividade</label>
+            <input type="text" name="activity-name" id="activity-name" placeholder="Nome da atividade...">
+        </div>
+        <div class="activity-input">
+            <label for="limit">Limite de Participantes</label>
+            <input type="number" name="limit" id="limit" placeholder="Quantos poderão participar?">
+        </div>
+        <div class="subject-name">
+            <label for="subject">Categoria</label>
+            <select id="subject" name="subject">
+                <option value="" disabled selected>Selecione a categoria</option>
+                <option value="matematica">Categoria 01</option>
+                <option value="portugues">Categoria 02</option>
+                <option value="historia">Categoria 03</option>
+            </select>
+        </div>
+
+        <div class="activity-input">
+            <label for="activity">Descrição da Atividade</label>
+            <textarea id="activity" name="activity" rows="4" placeholder="Descreva a atividade aqui..."></textarea>
+        </div>
+
+        <div class="activity-input">
+            <label for="data-inicio">Data de Início</label>
+            <input type="date" name="data-inicio" id="data-inicio">
+        </div>
+    
+        <div class="activity-input">
+            <label for="data-termino">Data de Termino</label>
+            <input type="date" name="data-termino" id="data-termino">
+        </div>
+
+        <div class="submit-button">
+            <button id="submit-button">Cadastrar</button>
+        </div>
+
+    </div>
+    <!--<script src="Assets/JS/scripts.js"></script>-->
+</body>
+</html>

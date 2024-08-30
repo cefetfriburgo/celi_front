@@ -2,7 +2,7 @@ import {listarDados} from '../services/fetch.js';
 
 const messes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
-export async function rendeizarPage(atividadeId, content) {
+export async function rendeizarPageGeral(atividadeId, content) {
     try {
         const dates = await listarDados('./Scripts/json/08-atividade.json');
         let inicio;

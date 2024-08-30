@@ -1,10 +1,13 @@
 .atividade{
-    background-color: rgb(224, 224, 224);
+    background-color: #ededed;
     padding: 15px;
     border-radius: 25px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.atividade button:hover{
+    background-color: #ededed;
 }
 .texto-atividade{
     max-width: 85%;

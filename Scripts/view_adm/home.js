@@ -5,14 +5,13 @@ export async function rendeizarHome(content) {
         const dates = await listarDados('./Scripts/json/08-atividade.json');
         content.innerHTML = '';
         let div = document.createElement("div");
-        div.innerHTML = `<button class="mb">Nova Atividade</button>`;
+        div.innerHTML = `<a class="nova-atividade mb" href="./Forms">Nova Atividade</a>`;
 
         dates.forEach(element=>{
             div.innerHTML += `
                 <div id="${element.id}" class="atividade mb">
                     <div class="texto-atividade">
-                        <h2>${element.nome}</h2>
-                        <a href="#" class="linkDetalhes">Detalhes</a>
+                        <h2><a href="#" class="linkDetalhes">${element.nome}</a></h2>
                         <p>${element.descricao}</p>
                     </div>
                     <button>Publicar</button>

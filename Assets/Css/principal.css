@@ -13,7 +13,12 @@ body{
 .mb{
     margin-bottom: 5px;
 }
-button{
+.nova-atividade{
+    margin: 10px 0;
+    display: inline-block;
+}
+button, .nova-atividade{
+    text-decoration: none;
     color: white;
     font-weight: bolder;
     font-size: 1.2em;
@@ -23,7 +28,7 @@ button{
     border-radius: 15px;
     transition: ease 0.3s;
 }
-button:hover{
+button:hover, .nova-atividade:hover{
     background-color: white;
     color: rgb(0, 74, 117);
 }

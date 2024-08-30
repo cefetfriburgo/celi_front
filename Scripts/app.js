@@ -1,5 +1,5 @@
-import {rendeizarHome} from './view_index/home.js';
-import {rendeizarPage} from './view_index/page.js';
+import {rendeizarHomeGeral} from './view_index/home.js';
+import {rendeizarPageGeral} from './view_index/page.js';
 
 const content = document.querySelector(".content");
 const linkHome = document.querySelector("#botaoHome");
@@ -11,11 +11,11 @@ linkHome.addEventListener('click', function (){
 function acessarId(){
     let atividadeDiv = this.closest('.atividade.mb');
 
-    rendeizarPage(atividadeDiv.id, content);
+    rendeizarPageGeral(atividadeDiv.id, content);
 }
 
 async function home(){
-    await rendeizarHome(content);
+    await rendeizarHomeGeral(content);
     const linkDetalhes = document.querySelectorAll(".linkDetalhes");
     linkDetalhes.forEach(element=>{
         element.addEventListener('click', acessarId);

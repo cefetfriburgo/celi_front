@@ -34,11 +34,15 @@ header {
     width: 100%;
     color: var(--color-Box02);
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     background-color: var(--color-Box01);
     font-size: 1.25rem;
     padding: 1.5rem;
     font-weight: 400;
+}
+
+#sub-titulo a{
+    padding: 5px;
 }
 
 @media screen and (max-width: 1170px) {

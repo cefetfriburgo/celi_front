@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/CSS/Styles.css">
+    <title>Formulário de Cadastro de Atividade</title>
+</head>
+<body>
+    <div class="activity-form">
+        <div class="form-header">
+            <div class="student-info">
+                <div class="student-photo">
+                    <img src="Assets/img/student.jpg" alt="Foto do Aluno">
+                </div>
+                <div class="student-name">Nome do Aluno</div>
+            </div>
+        </div>
+        <a href=""></a>
+        <div class="subject-name">
+            <label for="subject">Matéria</label>
+            <select id="subject" name="subject">
+                <option value="" disabled selected>Selecione a matéria</option>
+                <option value="matematica">Matemática</option>
+                <option value="portugues">Português</option>
+                <option value="historia">História</option>
+            </select>
+        </div>
+        
+        <div class="activity-input">
+            <label for="activity">Descrição da Atividade</label>
+            <textarea id="activity" name="activity" rows="4" placeholder="Descreva a atividade aqui..."></textarea>
+        </div>
+
+        <div class="file-uploads">
+            <label for="file-upload">Escolher arquivos</label>
+            <input type="file" id="file-upload" name="files" multiple>
+        </div>
+
+        <div class="file-list">
+            <h4 id="file-list-title" style="display: none;">Arquivos Enviados</h4>
+            <ul id="file-list"></ul>
+        </div>
+        
+        <div class="submit-button">
+            <button id="submit-button">Cadastrar</button>
+        </div>
+    </div>
+    
+    <!--<script src="Assets/JS/scripts.js"></script>-->
+</body>
+</html>
