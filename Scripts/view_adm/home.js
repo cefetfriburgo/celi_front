@@ -1,11 +1,11 @@
 import {listarDados} from '../services/fetch.js';
 
-export async function rendeizarHome(content) {
+export async function rendeirizarHomeAdm(content) {
     try {
         const dates = await listarDados('./Scripts/json/08-atividade.json');
         content.innerHTML = '';
         let div = document.createElement("div");
-        div.innerHTML = `<a class="nova-atividade mb" href="./Forms">Nova Atividade</a>`;
+        div.innerHTML = `<button class="form-atividade mb">Nova Atividade</button>`;
 
         dates.forEach(element=>{
             div.innerHTML += `
@@ -14,7 +14,7 @@ export async function rendeizarHome(content) {
                         <h2><a href="#" class="linkDetalhes">${element.nome}</a></h2>
                         <p>${element.descricao}</p>
                     </div>
-                    <button>Publicar</button>
+                    <button class="botaoPublicarListagem">Publicar</button>
                 </div>
             `
         });

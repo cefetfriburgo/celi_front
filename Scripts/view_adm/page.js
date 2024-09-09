@@ -16,7 +16,7 @@ async function mostrarInscritos() {
     }
 }
 
-export async function rendeizarPage(atividadeId, content) {
+export async function rendeirizarPageAdm(atividadeId, content) {
     try {
         const dates = await listarDados('./Scripts/json/08-atividade.json');
         const inscritos = await mostrarInscritos();
@@ -24,7 +24,6 @@ export async function rendeizarPage(atividadeId, content) {
         let termino;
         dates.forEach(element=>{
             if(element.id==atividadeId){
-                console.log(element);
                 inicio = new Date(element.created_at).getDate();
                 inicio += ` de ${messes[new Date(element.created_at).getMonth()]}`;
                 inicio += ` de ${new Date(element.created_at).getFullYear()}`;
@@ -32,12 +31,22 @@ export async function rendeizarPage(atividadeId, content) {
                 termino = new Date(element.updated_at).getDate();
                 termino += ` de ${messes[new Date(element.updated_at).getMonth()]}`;
                 termino += ` de ${new Date(element.updated_at).getFullYear()}`;
+
+
+                //Local Storage da Atividade
+                localStorage.setItem('id', atividadeId);
+                localStorage.setItem('name', element.nome);
+                localStorage.setItem('limit', element.limite_participantes);
+                localStorage.setItem('activity', element.descricao);
+                localStorage.setItem('startDate', `${new Date(element.created_at).getFullYear()}-${((new Date(element.created_at).getMonth()) + 1).toString().padStart(2, '0')}-${new Date(element.created_at).getDate().toString().padStart(2, '0')}`)
+                localStorage.setItem('endDate', `${new Date(element.updated_at).getFullYear()}-${((new Date(element.updated_at).getMonth()) + 1).toString().padStart(2, '0')}-${new Date(element.updated_at).getDate().toString().padStart(2, '0')}`)
+
                 content.innerHTML = `
                     <div class="detalhes-atividade bb mb">
                         <h1 class="mb">${element.nome}</h1>
                         <div class="botoes-acao mb">
-                            <button>Publicar</button>
-                            <button>Atualizar</button>
+                            <button class="botaoPublicar">Publicar</button>
+                            <button class="form-atividade mb botaoAtualizar">Atualizar</button>
                             <button class="delete">Excluír</button>
                         </div>
                         <p class="date mb">Início: ${inicio}</p>

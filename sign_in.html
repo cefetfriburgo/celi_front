@@ -39,7 +39,7 @@
         <div id="sub-title">
             <div>
                 <a href="/">Geral</a>
-                <a href="./adm.html" id="botaoHome">ADM</a>
+                <a href="./adm.html">ADM</a>
             </div>
             <div>
                 <a href="./sign_in.html">Entrar</a>
@@ -47,7 +47,16 @@
         </div>
     </header>
     <div class="content">
-        
+        <form class="formularioLogin" action="">
+            <div class="containerInputs">
+                <input class="formularioInput" type="email" name="email" id="emailInput" placeholder="E-Mail" required>
+                <input class="formularioInput"  type="password" name="senha" id="senhaInput" placeholder="Senha" required>
+            </div>
+            <input type="submit" value="Entrar" class="formularioBotao">
+            <div>
+                Ainda não possui uma conta? Clique <a href="./sign_up.html">aqui.</a>
+            </div>
+        </form>
     </div>
     <footer>
         <div id="footer-credits">
@@ -69,7 +78,5 @@
             &#169; Site Desenvolvido por Fábrica de Software
         </div>
     </footer>
-
-    <script type="module" src="./Scripts/app_adm.js"></script>
 </body>
 </html>

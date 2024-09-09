@@ -1,0 +1,119 @@
+.activity-form {
+    width: 50%;
+    background-color: var(--color-Box01);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.subject-name, .activity-input{
+    margin-bottom: 1.5rem;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-Background);
+}
+
+.activity-input textarea {
+    resize: none;
+}
+
+.subject-name label,
+.activity-input label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.subject-name select {
+    background-color: var(--color-Background);
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#submit-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--color-Highlight);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px solid var(--color-Highlight);
+    transition: 0.25s ease;
+}
+
+#submit-button:hover {
+    background-color: #ededed;
+    color: var(--color-Highlight);
+}
+
+@media (max-width: 768px) {
+    .activity-form {
+        width: 90%;
+    }
+}
+
+/* Formulário de Login e Registro*/
+
+.formularioLogin, .formularioResgistro{
+    background-color: var(--color-Box01);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-around;
+
+    max-width: 450px;
+    min-height: 300px;
+
+    border-radius: 10%;
+
+    padding: 45px 10px;
+    margin: 25px auto;
+}
+
+.formularioInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7.5px;
+    margin-bottom: 15px;
+
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+.formularioInput:focus {
+    outline: none;
+    border: none;
+}
+.formularioBotao {
+    width: 50%;
+
+    border-radius: 10px;
+
+    background-color: #005b6e;
+    color: #ffffff;
+
+    padding: 7.5px;
+
+    font-weight: bolder;
+}
+
+.formularioBotao:hover {
+    background-color: #0f849b;
+    cursor: pointer;
+}

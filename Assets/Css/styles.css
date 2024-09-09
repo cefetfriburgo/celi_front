@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('Header.css');
 @import url('Footer.css');
+@import url('Form.css');
 
 * {
-    font-family: 'Inter', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,8 +11,9 @@
 
 :root {
     --color-Highlight: #015a6d;
-    --color-Background: #fefefe;
     --color-Hover: #02687f;
+    --color-Background: #fefefe;
+    --color-redButton: #9b0000;
     --color-Box01: #ededed;
     --color-Box02: #020311;
     --color-Text02: #51575d;
@@ -22,4 +23,70 @@
 
 body {
     background-color: var(--color-Background);
+}
+.content{
+    padding: 10px 50px;
+}
+.mb{
+    margin-bottom: 5px;
+}
+.form-atividade{
+    margin: 10px 0;
+    display: inline-block;
+}
+button, .form-atividade{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2em;
+    background-color: var(--color-Highlight);
+    border: 2px solid var(--color-Highlight);
+    padding: 8px;
+    border-radius: 15px;
+    transition: ease 0.3s;
+}
+button:hover, .form-atividade:hover{
+    background-color: white;
+    color: var(--color-Highlight);
+}
+.delete{
+    background-color: var(--color-redButton);
+    border-color: var(--color-redButton);
+}
+.delete:hover{
+    color: var(--color-redButton);
+}
+.date{
+    font-weight: bolder;
+}
+p{
+    margin-bottom: 4.5px;
+}
+ul{
+    list-style: none;
+}
+li{
+    margin-bottom: 4px;
+}
+a{
+    color: black;
+}
+
+.atividade{
+    background-color: var(--color-Box01);
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.atividade button:hover{
+    background-color: var(--color-Box01);
+}
+.texto-atividade{
+    max-width: 85%;
+}
+a{
+    color:var(--color-Box02);
 }

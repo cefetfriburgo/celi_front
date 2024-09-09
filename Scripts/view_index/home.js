@@ -1,6 +1,6 @@
 import {listarDados} from '../services/fetch.js';
 
-export async function rendeizarHomeGeral(content) {
+export async function rendeirizarHomeGeral(content) {
     try {
         const dates = await listarDados('./Scripts/json/08-atividade.json');
         content.innerHTML = '';
@@ -12,7 +12,7 @@ export async function rendeizarHomeGeral(content) {
                         <h2><a href="#" class="linkDetalhes">${element.nome}</a></h2>
                         <p>${element.descricao}</p>
                     </div>
-                    <button>Inscreva-se</button>
+                    <button class="botaoInscricao">Inscreva-se</button>
                 </div>
             `
         });
