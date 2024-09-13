@@ -1,13 +1,17 @@
-    import {rendeirizarHomeAdm} from './view_adm/home.js';
-    import {rendeirizarPageAdm} from './view_adm/page.js';
-    import {rendeirizarFormAtividade} from './view_adm/form.js';
+import {rendeirizarHomeAdm} from './view_adm/home.js';
+import {rendeirizarPageAdm} from './view_adm/page.js';
+import {rendeirizarFormAtividade} from './view_adm/form.js';
+import {atividadeCadastrar} from './services/atividade_cadastrar.js';
+import {atividadeAtualizar} from './services/atividade_atualizar.js';
+import {atividadePublicar} from './services/atividade_publicar.js';
+import { atividadeDeletar } from './services/atividade_deletar.js';
 
     const content = document.querySelector(".content");
 
 
     function publicarAtividadeViaId(){
         let atividadeDiv = this.closest('.atividade.mb');
-        alert(atividadeDiv.id);
+        atividadePublicar(atividadeDiv.id);
     }
 
     async function detalharAtividadeId(){
@@ -26,22 +30,23 @@
         
         document.querySelector(".botaoPublicar").addEventListener('click', ()=>{
             //publicar via detalhes
-            alert("publicada")
+            atividadePublicar(atividadeDiv.id);
         })
 
         document.querySelector(".delete").addEventListener('click', ()=>{
             //delete
-            alert("deletada");
+            atividadeDeletar(atividadeDiv.id);
         })
-
+        
         document.querySelector(".botaoAtualizar").addEventListener('click', ()=>{
             rendeirizarFormAtividade(content, formValues);
 
             setTimeout(() => {
                 // Adiciona o escutador de eventos ao botão submit
-                document.querySelector("#main-form").addEventListener('submit', event => {
+                const formElement = document.querySelector("#main-form");
+                formElement.addEventListener('submit', event => {
                     event.preventDefault();
-                    alert("teste");
+                    atividadeAtualizar(formElement);
                 });
             }, 0);
         })
@@ -58,9 +63,11 @@
         setTimeout(() => {
             // Adiciona o escutador de eventos ao botão submit
             console.log("Chegou");
-            document.querySelector("#main-form").addEventListener('submit', event => {
+            const formElement = document.querySelector("#main-form");
+            formElement.addEventListener('submit', event => {
                 event.preventDefault();
-                alert("teste");
+                atividadeCadastrar(formElement);
+                
             });
         }, 0);
     }

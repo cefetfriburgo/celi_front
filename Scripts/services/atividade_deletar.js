@@ -1,11 +1,11 @@
-export function atividadePublicar(id){
+export function atividadeDeletar(id){
     alert(id)
     // const formData = new FormData(formElement);
     // const data = Object.fromEntries(formData);
 
 
     // fetch('', {
-    //     method: 'POST',
+    //     method: 'DELETE',
     //     headers: {
     //         'Content-Type': 'application/json'
     //     },
