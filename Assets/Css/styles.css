@@ -123,7 +123,7 @@ a{
 .superiorContainer {
     display: flex;
     justify-content: center;
-    padding: 80px;
+    padding: 60px;
 
 
 }
@@ -135,18 +135,22 @@ a{
     align-self: center;
     gap: 8px;
 
-    padding-top: 30px;
+    padding-top: 25px;
     box-shadow: lightgray 10px 10px 10px ;
     background-color: #EDEDED;
 
     
     border-radius: 5px;
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: 350px;
 }
 
 .passContainer input {
     width: 80%;
+}
+
+#passButton {
+    margin-top: 30px;
 }
 
 
