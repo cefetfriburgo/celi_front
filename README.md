@@ -5,6 +5,7 @@
 * adm.html: Arquivo HTML onde os usuários administradores irão interagir com o sistema, realizando operações de CRUD.
 * sign_up.html: Formulário para registrar-se no sistema.
 * sign_in.html: Formulário para realizar login no sistema.
+* user_profile.html: Área do usuário que mostra informações e atividades que ele participou ou está cadastrado.
 
 * Assets
     * CSS: Folhas de estilo do sistema.
