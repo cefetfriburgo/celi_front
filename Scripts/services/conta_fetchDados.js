@@ -20,7 +20,10 @@ renderizarDados();
 
   let listItem = document.createElement('ul');
   listItem.innerHTML = `
-  <li class="accItemData">ID: ${user.id}</li><li class="accItemData">Nome: ${user.name}</li><li class="accItemData">Email: ${user.email}</li>`;
+  <li class="accItemData">ID: ${user.id}</li>
+  <li class="accItemData">Nome: ${user.name}</li>
+  <li class="accItemData">Email: ${user.email}</li>
+  <img class="fotoDePerfil" src="${user.profile_photo_url}" alt="Foto de Perfil">`;
 
   
   info.appendChild(listItem);
