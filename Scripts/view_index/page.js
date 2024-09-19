@@ -1,4 +1,4 @@
-import {listarDados} from '../services/fetch.js';
+import {listarDados} from '../services/atividade/get.js';
 
 const messes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 

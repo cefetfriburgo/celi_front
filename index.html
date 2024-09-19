@@ -11,10 +11,10 @@
     <header>
         <!-- Barra de Navegação -->
         <div class="nav-bar">
-            <!-- Logo CELi -->
+            <!-- LogoCELi -->
             <div class="nav-logo">
                 <a href="http://celi.cefet-rj.br">
-                    <img src="./Assets/Imagens/Logo CELi.png" alt="Logo CELi">
+                    <img src="./Assets/Imagens/LogoCELi.png" alt="LogoCELi">
                 </a>
             </div>
             <!-- Lista de Redes Sociais -->
@@ -39,10 +39,12 @@
         <div id="sub-title">
             <div>
                 <a href="/" id="botaoHome">Geral</a>
+                <a href="#">Perfil</a>
                 <a href="/adm.html">ADM</a>
             </div>
             <div>
-                <a href="./sign_in.html">Entrar</a>
+                <a href="./sign_in.html" class="buttonLogin">Entrar</a>
+                <a href="#" class="buttonLogout">Sair</a>
             </div>
         </div>
     </header>
@@ -54,13 +56,13 @@
             <div class="credit">
                 <h3>Desenvolvido por:</h3>
                 <a href="#">
-                    <img src="Assets/Imagens/Logo FdS.png" alt="Logo Fábrica de Software">
+                    <img src="Assets/Imagens/LogoFdS.png" alt="Logo Fábrica de Software">
                 </a>
             </div>
             <div>
                 <h3>Apoiado por:</h3>
                 <a href="https://www.cefet-rj.br">
-                    <img src="Assets/Imagens/Logo CEFET.png" alt="Logo CEFET">
+                    <img src="Assets/Imagens/LogoCEFET.png" alt="LogoCEFET">
                 </a>
             </div>
         </div> 
@@ -71,5 +73,9 @@
     </footer>
 
     <script type="module" src="./Scripts/app_index.js"></script>
+
+    <script src="./Scripts/services/logout.js"></script>
+
+    <script src="./Scripts/services/button_switch.js"></script>
 </body>
 </html>

@@ -1,11 +1,13 @@
-export function atividadeDeletar(id){
-    alert(id)
+export function atividadeInscricao(idAtividade, idParticipante){
+    if(confirm("Tem certezar que deseja se inscrever?")){
+        alert(idAtividade);
+    }
     // const formData = new FormData(formElement);
     // const data = Object.fromEntries(formData);
 
 
     // fetch('', {
-    //     method: 'DELETE',
+    //     method: 'POST',
     //     headers: {
     //         'Content-Type': 'application/json'
     //     },

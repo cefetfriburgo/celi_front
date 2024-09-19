@@ -1,4 +1,4 @@
-import {listarDados} from '../services/fetch.js';
+import {listarDados} from '../services/atividade/get.js';
 
 export async function rendeirizarHomeAdm(content) {
     try {

@@ -1,11 +1,14 @@
-export function atividadePublicar(id){
-    alert(id)
+export function atividadeDeletar(id){
+    if(confirm("Tem certeza que deseja Exluir?")){
+        alert(`Atividade ${id} eliminada`);
+        window.location.assign('/adm.html');
+    }
     // const formData = new FormData(formElement);
     // const data = Object.fromEntries(formData);
 
 
     // fetch('', {
-    //     method: 'POST',
+    //     method: 'DELETE',
     //     headers: {
     //         'Content-Type': 'application/json'
     //     },

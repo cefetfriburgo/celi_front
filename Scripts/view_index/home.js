@@ -1,4 +1,4 @@
-import {listarDados} from '../services/fetch.js';
+import {listarDados} from '../services/atividade/get.js';
 
 export async function rendeirizarHomeGeral(content) {
     try {
@@ -12,7 +12,7 @@ export async function rendeirizarHomeGeral(content) {
                         <h2><a href="#" class="linkDetalhes">${element.nome}</a></h2>
                         <p>${element.descricao}</p>
                     </div>
-                    <button class="botaoInscricao">Inscreva-se</button>
+                    <button class="botaoInscricao" id="${element.id}">Inscreva-se</button>
                 </div>
             `
         });

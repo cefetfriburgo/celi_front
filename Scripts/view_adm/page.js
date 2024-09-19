@@ -1,16 +1,15 @@
-import {listarDados} from '../services/fetch.js';
+import {listarDados} from '../services/atividade/get.js';
 
 const messes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
-async function mostrarInscritos() {
+async function mostrarInscritos(listaInscritos, idAtividade) {
     try {
-        const user = await listarDados('./Scripts/json/01-user.json');
-        let userList = user.users;
-        let inscritos = '';
+        const response = await fetch('./Scripts/json/01-user.json');
+        const data = await response.json()
+        let userList = data.users;
         userList.forEach(element => {
-            inscritos += `<li>${element.name} - ${element.email}</li>`;
+            listaInscritos.innerHTML += `<li>${element.name} - ${element.email}</li>`;
         });
-        return inscritos;
     } catch (error) {
         console.error('Erro ao processar dados', error);
     }
@@ -19,7 +18,6 @@ async function mostrarInscritos() {
 export async function rendeirizarPageAdm(atividadeId, content) {
     try {
         const dates = await listarDados('./Scripts/json/08-atividade.json');
-        const inscritos = await mostrarInscritos();
         let inicio;
         let termino;
         dates.forEach(element=>{
@@ -31,7 +29,6 @@ export async function rendeirizarPageAdm(atividadeId, content) {
                 termino = new Date(element.updated_at).getDate();
                 termino += ` de ${messes[new Date(element.updated_at).getMonth()]}`;
                 termino += ` de ${new Date(element.updated_at).getFullYear()}`;
-
 
                 //Local Storage da Atividade
                 localStorage.setItem('id', atividadeId);
@@ -56,12 +53,14 @@ export async function rendeirizarPageAdm(atividadeId, content) {
                         </div>
                         <h2 class="mb">Inscritos</h2>
                         <ul class="inscritos">
-                            ${inscritos}
+                            
                         </ul>
                     </div>
                 `
             }
         });
+        const listaInscritos = document.querySelector('.inscritos');
+        await mostrarInscritos(listaInscritos, localStorage.getItem('id'));
     } catch (error) {
         console.error('Erro ao processar dados', error);
     }

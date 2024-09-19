@@ -1,6 +1,7 @@
 import {rendeirizarHomeGeral} from './view_index/home.js';
 import {rendeirizarPageGeral} from './view_index/page.js';
-    
+import {atividadeInscricao} from './services/atividade/atividade_inscricao.js';
+
 const content = document.querySelector(".content");
 const linkHome = document.querySelector("#botaoHome");
 
@@ -12,7 +13,7 @@ async function acessarId(){
     let atividadeDiv = this.closest('.atividade.mb');
     await rendeirizarPageGeral(atividadeDiv.id, content);
     document.querySelector(".botaoInscricaoDetalhes").addEventListener("click", ()=>{
-        alert("Inscricao");
+        atividadeInscricao(atividadeDiv.id);
     })
 }
 
@@ -23,12 +24,8 @@ async function home(){
     })
 
     document.querySelectorAll(".botaoInscricao").forEach(element=>{
-        element.addEventListener('click', ()=>{
-            if(confirm("Tem certeza que deseja se inscrever?")){
-                alert("Inscrição concluída!");
-            }else{
-                alert("Inscrição cancelada");
-            }
+        element.addEventListener('click', function(){   
+            atividadeInscricao(this.id);
         })
     })
 }
