@@ -8,7 +8,8 @@ export function atividadeAtualizar(formElement){
         fetch(`http://localhost:8000/api/atividade/${localStorage.getItem('id')}`, {
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('chave')}`
             },
             body: JSON.stringify(data)
         })

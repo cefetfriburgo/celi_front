@@ -4,7 +4,11 @@ const messes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Jul
 
 async function mostrarInscritos(listaInscritos, idAtividade) {
     try {
-        const response = await fetch('http://localhost:8000/api/user');
+        const response = await fetch('http://localhost:8000/api/user', {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('chave')}`  
+            }
+        });
         const data = await response.json()
         let userList = data.users;
         userList.forEach(element => {
@@ -22,21 +26,21 @@ export async function rendeirizarPageAdm(atividadeId, content) {
         let termino;
         dates.forEach(element=>{
             if(element.id==atividadeId){
-                inicio = new Date(element.created_at).getDate();
-                inicio += ` de ${messes[new Date(element.created_at).getMonth()]}`;
-                inicio += ` de ${new Date(element.created_at).getFullYear()}`;
+                inicio = new Date(element.data_inicio).getDate();
+                inicio += ` de ${messes[new Date(element.data_inicio).getMonth()]}`;
+                inicio += ` de ${new Date(element.data_inicio).getFullYear()}`;
 
-                termino = new Date(element.updated_at).getDate();
-                termino += ` de ${messes[new Date(element.updated_at).getMonth()]}`;
-                termino += ` de ${new Date(element.updated_at).getFullYear()}`;
+                termino = new Date(element.data_termino).getDate();
+                termino += ` de ${messes[new Date(element.data_termino).getMonth()]}`;
+                termino += ` de ${new Date(element.data_termino).getFullYear()}`;
 
                 //Local Storage da Atividade
                 localStorage.setItem('id', atividadeId);
                 localStorage.setItem('name', element.nome);
                 localStorage.setItem('limit', element.limite_participantes);
                 localStorage.setItem('activity', element.descricao);
-                localStorage.setItem('startDate', `${new Date(element.created_at).getFullYear()}-${((new Date(element.created_at).getMonth()) + 1).toString().padStart(2, '0')}-${new Date(element.created_at).getDate().toString().padStart(2, '0')}`)
-                localStorage.setItem('endDate', `${new Date(element.updated_at).getFullYear()}-${((new Date(element.updated_at).getMonth()) + 1).toString().padStart(2, '0')}-${new Date(element.updated_at).getDate().toString().padStart(2, '0')}`)
+                localStorage.setItem('startDate', `${new Date(element.data_inicio).getFullYear()}-${((new Date(element.data_inicio).getMonth()) + 1).toString().padStart(2, '0')}-${new Date(element.data_inicio).getDate().toString().padStart(2, '0')}`)
+                localStorage.setItem('endDate', `${new Date(element.data_termino).getFullYear()}-${((new Date(element.data_termino).getMonth()) + 1).toString().padStart(2, '0')}-${new Date(element.data_termino).getDate().toString().padStart(2, '0')}`)
 
                 content.innerHTML = `
                     <div class="detalhes-atividade bb mb">
