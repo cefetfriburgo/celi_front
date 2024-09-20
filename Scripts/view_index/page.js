@@ -4,7 +4,7 @@ const messes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Jul
 
 export async function rendeirizarPageGeral(atividadeId, content) {
     try {
-        const dates = await listarDados('./Scripts/json/08-atividade.json');
+        const dates = await listarDados('http://localhost:8000/api/atividade');
         let inicio;
         let termino;
         dates.forEach(element=>{

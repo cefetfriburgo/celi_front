@@ -1,9 +1,10 @@
+//${localStorage.getItem('userId')}
 export function rendeirizarFormAtividade(content, value){
     content.innerHTML = `
         <form id="main-form">
             <div class="activity-form">
 
-                <input type="hidden" name="realizador_id" id="realizador_id" value="${localStorage.getItem('userId')}">
+                <input type="hidden" name="realizador_id" id="realizador_id" value="1">
                 <div class="activity-input">
                     <label for="activity-name">Nome da Atividade</label>
                     <input type="text" name="nome" id="nome" placeholder="Nome da atividade..." value="${value.name}">

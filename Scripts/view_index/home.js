@@ -2,7 +2,7 @@ import {listarDados} from '../services/atividade/get.js';
 
 export async function rendeirizarHomeGeral(content) {
     try {
-        const dates = await listarDados('./Scripts/json/08-atividade.json');
+        const dates = await listarDados('http://localhost:8000/api/atividade');
         content.innerHTML = '';
         let div = document.createElement("div");
         dates.forEach(element=>{

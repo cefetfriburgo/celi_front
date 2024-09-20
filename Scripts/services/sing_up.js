@@ -1,4 +1,3 @@
-localStorage.setItem('chave', '');
 const formSignUp = document.querySelector('.formularioResgistro');
 
 formSignUp.addEventListener('submit', event =>{
@@ -8,7 +7,44 @@ formSignUp.addEventListener('submit', event =>{
     const data = Object.fromEntries(formData);
     const jsonData = JSON.stringify(data);
 
-    localStorage.setItem('chave', 'teste02');
-    alert(localStorage.getItem('chave'));
-    window.location.assign('/');
+    fetch('http://localhost:8000/api/user', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: jsonData
+    })
+    .then(response => response.json())
+    .then(data => {
+        // lidar com a resposta aqui
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
+
+    delete jsonData.nome;
+
+    fetch('http://localhost:8000/api/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: jsonData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Salvar o token recebido no localStorage
+        localStorage.setItem('chave', data.token);
+        // Redirecionar ou realizar outra ação
+        window.location.assign('/');
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert('Erro ao fazer login. Verifique suas credenciais.');
+    });
 });

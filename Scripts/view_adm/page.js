@@ -4,7 +4,7 @@ const messes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Jul
 
 async function mostrarInscritos(listaInscritos, idAtividade) {
     try {
-        const response = await fetch('./Scripts/json/01-user.json');
+        const response = await fetch('http://localhost:8000/api/user');
         const data = await response.json()
         let userList = data.users;
         userList.forEach(element => {
@@ -17,7 +17,7 @@ async function mostrarInscritos(listaInscritos, idAtividade) {
 
 export async function rendeirizarPageAdm(atividadeId, content) {
     try {
-        const dates = await listarDados('./Scripts/json/08-atividade.json');
+        const dates = await listarDados('http://localhost:8000/api/atividade');
         let inicio;
         let termino;
         dates.forEach(element=>{
