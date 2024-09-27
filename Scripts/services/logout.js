@@ -9,9 +9,10 @@ async function logout() {
     })
     .catch(error => {
         console.error('Erro:', error);
-        alert('Erro');
+        // alert('Erro');
     });
     localStorage.setItem('chave', '');
-    alert('Chave Vazia');
+    localStorage.setItem('id_user', '');
+    // alert('Chave Vazia');
     window.location.assign('/');
 }

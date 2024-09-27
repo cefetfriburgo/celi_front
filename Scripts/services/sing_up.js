@@ -40,11 +40,12 @@ formSignUp.addEventListener('submit', event =>{
     .then(data => {
         // Salvar o token recebido no localStorage
         localStorage.setItem('chave', data.token);
+        localStorage.setItem('id_user', data.user_id);
         // Redirecionar ou realizar outra ação
         window.location.assign('/');
     })
     .catch(error => {
         console.error('Erro:', error);
-        alert('Erro ao fazer login. Verifique suas credenciais.');
+        // alert('Erro ao fazer login. Verifique suas credenciais.');
     });
 });

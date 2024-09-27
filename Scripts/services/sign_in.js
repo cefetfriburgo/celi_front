@@ -21,9 +21,9 @@ formLogin.addEventListener('submit', event => {
         return response.json();
     })
     .then(data => {
-        // Salvar o token recebido no localStorage
         localStorage.setItem('chave', data.token);
-        alert('Login bem-sucedido!');
+        localStorage.setItem('id_user', data.user_id);
+        // alert('Login bem-sucedido!');
         // Redirecionar ou realizar outra ação
         window.location.assign('/');
     })

@@ -13,7 +13,7 @@ async function acessarId(){
     let atividadeDiv = this.closest('.atividade.mb');
     await rendeirizarPageGeral(atividadeDiv.id, content);
     document.querySelector(".botaoInscricaoDetalhes").addEventListener("click", ()=>{
-        atividadeInscricao(atividadeDiv.id);
+        atividadeInscricao(atividadeDiv.id, localStorage.getItem('id_user'));
     })
 }
 
@@ -25,7 +25,7 @@ async function home(){
 
     document.querySelectorAll(".botaoInscricao").forEach(element=>{
         element.addEventListener('click', function(){   
-            atividadeInscricao(this.id);
+            atividadeInscricao(this.id, localStorage.getItem('id_user'));
         })
     })
 }

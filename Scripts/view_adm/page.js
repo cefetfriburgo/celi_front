@@ -4,14 +4,14 @@ const messes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Jul
 
 async function mostrarInscritos(listaInscritos, idAtividade) {
     try {
-        const response = await fetch('http://localhost:8000/api/user', {
+        const response = await fetch(`http://localhost:8000/api/participantes/${idAtividade}`, {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('chave')}`  
             }
         });
         const data = await response.json()
-        let userList = data.users;
-        userList.forEach(element => {
+
+        data.forEach(element => {
             listaInscritos.innerHTML += `<li>${element.name} - ${element.email}</li>`;
         });
     } catch (error) {
@@ -64,7 +64,7 @@ export async function rendeirizarPageAdm(atividadeId, content) {
             }
         });
         const listaInscritos = document.querySelector('.inscritos');
-        await mostrarInscritos(listaInscritos, localStorage.getItem('id'));
+        await mostrarInscritos(listaInscritos, atividadeId);
     } catch (error) {
         console.error('Erro ao processar dados', error);
     }
