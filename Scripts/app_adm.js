@@ -8,7 +8,6 @@ import {atividadeDeletar} from './services/atividade/atividade_deletar.js';
 
 const content = document.querySelector(".content");
 
-
 function publicarAtividadeViaId(){
     let atividadeDiv = this.closest('.atividade.mb');
     atividadePublicar(atividadeDiv.id);
@@ -38,7 +37,7 @@ async function detalharAtividadeId(){
         atividadeDeletar(atividadeDiv.id);
     })
 
-    // Rendeirizar o formulário de inscrição na aitividade
+    // Rendeirizar o formulário de inscrição na atividade
     document.querySelector(".botaoAtualizar").addEventListener('click', ()=>{
         rendeirizarFormAtividade(content, formValues);
         setTimeout(() => {
@@ -52,7 +51,7 @@ async function detalharAtividadeId(){
 }
 
 function carregarForm(){
-    // informações vazias, pois o form não deve estar vazio já ele será responsável apenas por criar uma atividade
+    // Informações vazias para que o form não carregue um texto predefinido ao criar uma tarefa
     let formValues = {
         name: '',
         limit: 0,

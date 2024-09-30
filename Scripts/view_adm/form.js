@@ -1,4 +1,3 @@
-//${localStorage.getItem('userId')}
 export function rendeirizarFormAtividade(content, value){
     content.innerHTML = `
         <form id="main-form">
