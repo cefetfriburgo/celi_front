@@ -7,7 +7,7 @@ formLogin.addEventListener('submit', event => {
     const data = Object.fromEntries(formData);
     const jsonData = JSON.stringify(data);
 
-    fetch('http://localhost:8000/api/login', {
+    fetch('https://celi.cefet-rj.br/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

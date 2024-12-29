@@ -4,7 +4,7 @@ const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julh
 
 async function mostrarInscritos(listaInscritos, idAtividade) {
     try {
-        const response = await fetch(`http://localhost:8000/api/participantes/${idAtividade}`, {
+        const response = await fetch(`https://celi.cefet-rj.br/coordenacao/api/participantes/${idAtividade}`, {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('chave')}`  
             }
@@ -21,7 +21,7 @@ async function mostrarInscritos(listaInscritos, idAtividade) {
 
 export async function rendeirizarPageAdm(atividadeId, content) {
     try {
-        const dates = await listarDados(`http://localhost:8000/api/atividade/${atividadeId}`);
+        const dates = await listarDados(`https://celi.cefet-rj.br/coordenacao/api/atividade/${atividadeId}`);
         let inicio;
         let termino;
 

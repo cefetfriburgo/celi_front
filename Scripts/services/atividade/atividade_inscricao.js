@@ -6,7 +6,7 @@ export async function atividadeInscricao(idAtividade, idParticipante){
             alert(idAtividade);
             alert(idParticipante);
 
-            await fetch(`http://localhost:8000/api/participante`, {
+            await fetch(`https://celi.cefet-rj.br/coordenacao/api/participante`, {
                 method: 'POST',
                 headers:{
                     // 'Authorization': `Bearer ${localStorage.getItem('chave')}`

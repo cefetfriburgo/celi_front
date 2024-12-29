@@ -5,7 +5,7 @@ export function atividadeCadastrar(formElement) {
     if (confirm("Tem certeza que deseja prosseguir?")) {
         console.log(data);
 
-        fetch('http://localhost:8000/api/atividade', {
+        fetch('https://celi.cefet-rj.br/coordenacao/api/atividade', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

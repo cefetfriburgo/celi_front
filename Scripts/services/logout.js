@@ -1,7 +1,7 @@
 document.querySelector(".buttonLogout").addEventListener("click", logout);
 
 async function logout() {
-    await fetch('http://localhost:8000/api/logout', {
+    await fetch('https://celi.cefet-rj.br/api/logout', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('chave')}`

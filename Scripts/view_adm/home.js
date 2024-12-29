@@ -2,7 +2,7 @@ import {listarDados} from '../services/atividade/get.js';
 
 export async function rendeirizarHomeAdm(content) {
     try {
-        const dates = await listarDados('http://localhost:8000/api/atividade');
+        const dates = await listarDados('https://celi.cefet-rj.br/coordenacao/api/atividade');
         content.innerHTML = '';
         let div = document.createElement("div");
         div.innerHTML = `<button class="form-atividade mb">Nova Atividade</button>`;

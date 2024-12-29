@@ -4,7 +4,7 @@ const messes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Jul
 
 export async function rendeirizarPageGeral(atividadeId, content) {
     try {
-        const dates = await listarDados(`http://localhost:8000/api/atividade_andamento/${atividadeId}`);
+        const dates = await listarDados(`https://celi.cefet-rj.br/coordenacao/api/atividade_andamento/${atividadeId}`);
         let inicio;
         let termino;
 

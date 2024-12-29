@@ -5,7 +5,7 @@ export function atividadeAtualizar(formElement){
     if (confirm("Tem certeza que deseja prosseguir?")) {
         console.log(data);
 
-        fetch(`http://localhost:8000/api/atividade/${localStorage.getItem('id')}`, {
+        fetch(`https://celi.cefet-rj.br/coordenacao/api/atividade/${localStorage.getItem('id')}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
