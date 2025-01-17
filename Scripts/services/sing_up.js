@@ -7,7 +7,7 @@ formSignUp.addEventListener('submit', event =>{
     const data = Object.fromEntries(formData);
     const jsonData = JSON.stringify(data);
 
-    fetch('https://celi.cefet-rj.br/api/user', {
+    fetch('https://celi.cefet-rj.br/coordenacao/api/user', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ formSignUp.addEventListener('submit', event =>{
 
     delete jsonData.nome;
 
-    fetch('https://celi.cefet-rj.br/api/login', {
+    fetch('https://celi.cefet-rj.br/coordenacao/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
