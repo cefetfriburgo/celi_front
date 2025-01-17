@@ -24,7 +24,7 @@ formSignUp.addEventListener('submit', event =>{
 
     delete jsonData.nome;
 
-    fetch('https://celi.cefet-rj.br/coordenacao/api/login', {
+    fetch('https://celi.cefet-rj.br/coordenacao/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
