@@ -23,7 +23,7 @@ formLogin.addEventListener('submit', event => {
     .then(data => {
         localStorage.setItem('chave', data.token);
         localStorage.setItem('id_user', data.user_id);
-        // alert('Login bem-sucedido!');
+        alert('Login bem-sucedido!');
         // Redirecionar ou realizar outra ação
         window.location.assign('/');
     })
