@@ -3,7 +3,7 @@ export function rendeirizarFormAtividade(content, value){
         <form id="main-form">
             <div class="activity-form">
 
-                <input type="hidden" name="realizador_id" id="realizador_id" value="1">
+                <input type="hidden" name="realizador_id" id="realizador_id" value="${16}">
                 <div class="activity-input">
                     <label for="activity-name">Nome da Atividade</label>
                     <input type="text" name="nome" id="nome" placeholder="Nome da atividade..." value="${value.name}">
