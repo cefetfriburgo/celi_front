@@ -1,5 +1,5 @@
 export async function atividadeInscricao(idAtividade, idParticipante){
-    if(localStorage.getItem('chave')==''){
+    if(localStorage.getItem('chave')=='' || localStorage.getItem('chave')==null){
         window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/sign_in.html');
     }else{
         if(confirm("Tem certezar que deseja se inscrever?")){
