@@ -7,6 +7,7 @@ formSignUp.addEventListener('submit', event => {
     const data = Object.fromEntries(formData);
     const jsonData = JSON.stringify(data);
 
+    // Enviar os dados para criar o usuário
     fetch('https://celi.cefet-rj.br/coordenacao/api/user', {
         method: 'POST',
         headers: {
@@ -16,39 +17,42 @@ formSignUp.addEventListener('submit', event => {
     })
     .then(response => response.json())
     .then(data => {
-        // lidar com a resposta aqui
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-    });
+        // Verificar se o cadastro foi bem-sucedido
+        if (data.success) {  // Supondo que a resposta contenha um campo 'success'
+            alert('Cadastro realizado com sucesso!');
 
-    // Remover a propriedade "nome" do objeto "data" antes de enviar novamente
-    delete data.name;
-    const updatedJsonData = JSON.stringify(data); // Criar uma nova string JSON
-    console.log(updatedJsonData);
-    fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: updatedJsonData
-    })
-    .then(response => {
-        console.log(response);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+            // Agora que o usuário foi criado, tentamos fazer o login
+            // O `data` pode conter as informações necessárias para o login (como email e senha)
+            const loginData = JSON.stringify({
+                email: data.email,  // Substitua conforme necessário
+                password: data.password  // Substitua conforme necessário
+            });
+
+            // Enviar a requisição de login
+            return fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: loginData
+            });
+        } else {
+            throw new Error('Erro ao criar usuário');
         }
-        return response.json();
     })
+    .then(response => response.json())
     .then(data => {
-        // Salvar o token recebido no localStorage
-        localStorage.setItem('chave', data.token);
-        localStorage.setItem('id_user', data.user_id);
-        // Redirecionar ou realizar outra ação
-        window.location.assign('/');
+        // Verificar se o login foi bem-sucedido
+        if (data.token) {
+            localStorage.setItem('chave', data.token);
+            localStorage.setItem('id_user', data.user_id);
+            window.location.assign('/');
+        } else {
+            throw new Error('Erro ao fazer login');
+        }
     })
     .catch(error => {
         console.error('Erro:', error);
-        // alert('Erro ao fazer login. Verifique suas credenciais.');
+        alert('Erro ao realizar o cadastro ou login.');
     });
 });
