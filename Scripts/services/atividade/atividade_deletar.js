@@ -6,7 +6,7 @@ export function atividadeDeletar(id) {
                 'Authorization': `Bearer ${localStorage.getItem('chave')}`
             }
         })
-        alert(`Atividade ${id} eliminada`);
+        alert(`Atividade eliminada`);
         window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/adm.html');
     }
 }
