@@ -23,6 +23,7 @@ formSignUp.addEventListener('submit', event =>{
     });
 
     delete jsonData.nome;
+    jsonData = JSON.stringify(data);
 
     fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
         method: 'POST',
