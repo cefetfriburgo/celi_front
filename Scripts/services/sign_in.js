@@ -25,7 +25,7 @@ formLogin.addEventListener('submit', event => {
         localStorage.setItem('id_user', data.user_id);
         alert('Login bem-sucedido!');
         // Redirecionar ou realizar outra ação
-        window.location.assign('/');
+        window.location.assign('https://celi.cefet-rj.br/coordenacao/');
     })
     .catch(error => {
         console.error('Erro:', error);

@@ -46,7 +46,7 @@ formSignUp.addEventListener('submit', async (event) => {
         localStorage.setItem('chave', data2.token);
         localStorage.setItem('id_user', data2.user_id);
         // Redirecionar ou realizar outra ação
-        window.location.assign('/');
+        window.location.assign('https://celi.cefet-rj.br/coordenacao/');
     } catch (error) {
         console.error('Erro:', error);
         alert('Erro ao fazer login. Verifique suas credenciais.');
