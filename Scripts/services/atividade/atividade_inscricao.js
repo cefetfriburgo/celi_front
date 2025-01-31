@@ -1,6 +1,6 @@
 export async function atividadeInscricao(idAtividade, idParticipante){
     if(localStorage.getItem('chave')==''){
-        window.location.assign('sign_in.html');
+        window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/sign_in.html');
     }else{
         if(confirm("Tem certezar que deseja se inscrever?")){
             alert(idAtividade);
@@ -9,7 +9,7 @@ export async function atividadeInscricao(idAtividade, idParticipante){
             await fetch(`https://celi.cefet-rj.br/coordenacao/api/participante`, {
                 method: 'POST',
                 headers:{
-                    // 'Authorization': `Bearer ${localStorage.getItem('chave')}`
+                    'Authorization': `Bearer ${localStorage.getItem('chave')}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
@@ -17,9 +17,9 @@ export async function atividadeInscricao(idAtividade, idParticipante){
                     "atividade_id": idAtividade
                 })
             })
-            alert(`Inscrição na atividade ${idAtividade} bem sucedidda`);
+            alert(`Inscrição na atividade bem sucedidda`);
 
-            window.location.assign('/');
+            window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/index.html');
         }
     }
 }
