@@ -23,7 +23,7 @@ formSignUp.addEventListener('submit', event => {
     });
 
     // Remover a propriedade "nome" do objeto "data" antes de enviar novamente
-    delete data.nome;
+    delete data.name;
     const updatedJsonData = JSON.stringify(data); // Criar uma nova string JSON
 
     fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
