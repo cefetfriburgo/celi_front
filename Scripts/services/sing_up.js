@@ -25,7 +25,7 @@ formSignUp.addEventListener('submit', event => {
     // Remover a propriedade "nome" do objeto "data" antes de enviar novamente
     delete data.name;
     const updatedJsonData = JSON.stringify(data); // Criar uma nova string JSON
-
+    console.log(updatedJsonData);
     fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
         method: 'POST',
         headers: {
@@ -48,7 +48,6 @@ formSignUp.addEventListener('submit', event => {
     })
     .catch(error => {
         console.error('Erro:', error);
-        console.log(updatedJsonData);
         // alert('Erro ao fazer login. Verifique suas credenciais.');
     });
 });
