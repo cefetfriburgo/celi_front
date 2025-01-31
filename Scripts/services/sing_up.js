@@ -1,6 +1,6 @@
 const formSignUp = document.querySelector('.formularioResgistro');
 
-formSignUp.addEventListener('submit', event =>{
+formSignUp.addEventListener('submit', event => {
     event.preventDefault();
 
     const formData = new FormData(formSignUp);
@@ -22,15 +22,16 @@ formSignUp.addEventListener('submit', event =>{
         console.error('Erro:', error);
     });
 
-    delete jsonData.nome;
-    jsonData = JSON.stringify(data);
+    // Remover a propriedade "nome" do objeto "data" antes de enviar novamente
+    delete data.nome;
+    const updatedJsonData = JSON.stringify(data); // Criar uma nova string JSON
 
     fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: jsonData
+        body: updatedJsonData
     })
     .then(response => {
         if (!response.ok) {
