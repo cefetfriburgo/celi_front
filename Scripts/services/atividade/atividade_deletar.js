@@ -7,6 +7,6 @@ export function atividadeDeletar(id) {
             }
         })
         alert(`Atividade ${id} eliminada`);
-        window.location.assign('/adm.html');
+        window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/adm.html');
     }
 }

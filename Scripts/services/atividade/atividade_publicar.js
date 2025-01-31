@@ -10,6 +10,6 @@ export async function atividadePublicar(id){
         })
         alert(`Atividade ${id} publicada`);
 
-        window.location.assign('/adm.html');
+        window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/adm.html');
     }
 }

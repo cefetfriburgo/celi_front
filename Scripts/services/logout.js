@@ -14,5 +14,5 @@ async function logout() {
     localStorage.setItem('chave', '');
     localStorage.setItem('id_user', '');
     // alert('Chave Vazia');
-    window.location.assign('/');
+    window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/index.html');
 }

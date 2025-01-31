@@ -22,7 +22,7 @@ export function atividadeCadastrar(formElement) {
             .then(data => {
                 console.log(data);
                 alert("Confirmado");
-                window.location.assign('/adm.html');
+                window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/adm.html');
             })
             .catch(error => {
                 console.error('Erro:', error);
