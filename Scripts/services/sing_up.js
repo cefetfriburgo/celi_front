@@ -48,6 +48,7 @@ formSignUp.addEventListener('submit', event => {
     })
     .catch(error => {
         console.error('Erro:', error);
+        console.log(updatedJsonData);
         // alert('Erro ao fazer login. Verifique suas credenciais.');
     });
 });
