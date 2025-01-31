@@ -50,4 +50,5 @@ formSignUp.addEventListener('submit', event => {
         console.error('Erro:', error);
         // alert('Erro ao fazer login. Verifique suas credenciais.');
     });
+    console.log(response);
 });
