@@ -34,6 +34,7 @@ formSignUp.addEventListener('submit', event => {
         body: updatedJsonData
     })
     .then(response => {
+        console.log(response);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -50,5 +51,4 @@ formSignUp.addEventListener('submit', event => {
         console.error('Erro:', error);
         // alert('Erro ao fazer login. Verifique suas credenciais.');
     });
-    console.log(response);
 });
