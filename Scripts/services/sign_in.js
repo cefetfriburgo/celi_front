@@ -7,7 +7,8 @@ formLogin.addEventListener('submit', event => {
     const data = Object.fromEntries(formData);
     const jsonData = JSON.stringify(data);
 
-    fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
+    fetch('https://celi.cefet-rj.br/eventos-testes/api/teste_login', {
+    //fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -25,7 +26,8 @@ formLogin.addEventListener('submit', event => {
         localStorage.setItem('id_user', data.user_id);
         alert('Login bem-sucedido!');
         // Redirecionar ou realizar outra ação
-        window.location.assign('https://celi.cefet-rj.br/coordenacao/');
+	window.location.assign('https://celi.cefet-rj.br/eventos-testes/');
+        //window.location.assign('https://celi.cefet-rj.br/coordenacao/');
     })
     .catch(error => {
         console.error('Erro:', error);

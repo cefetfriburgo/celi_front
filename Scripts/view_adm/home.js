@@ -1,12 +1,15 @@
+
 import {listarDados} from '../services/atividade/get.js';
 
 export async function rendeirizarHomeAdm(content) {
     try {
-        const dates = await listarDados('https://celi.cefet-rj.br/coordenacao/api/atividade');
+	 
+	const dates = await listarDados('https://celi.cefet-rj.br/eventos-testes/api/atividade');
+        //const dates = await listarDados('https://celi.cefet-rj.br/coordenacao/api/atividade');
         content.innerHTML = '';
         let div = document.createElement("div");
         div.innerHTML = `<button class="form-atividade mb">Nova Atividade</button>`;
-
+	console.log(dates);
         dates.forEach(element=>{
             div.innerHTML += `
                 <div id="${element.id}" class="atividade mb">

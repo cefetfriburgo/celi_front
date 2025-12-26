@@ -5,7 +5,8 @@ export function atividadeCadastrar(formElement) {
     if (confirm("Tem certeza que deseja prosseguir?")) {
         console.log(data);
 
-        fetch('https://celi.cefet-rj.br/coordenacao/api/atividade', {
+	fetch('https://celi.cefet-rj.br/eventos-testes/api/atividade', {
+        //fetch('https://celi.cefet-rj.br/coordenacao/api/atividade', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -22,7 +23,8 @@ export function atividadeCadastrar(formElement) {
             .then(data => {
                 console.log(data);
                 alert("Confirmado");
-                window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/adm.html');
+		window.location.assign('https://celi.cefet-rj.br/eventos-testes/atividades/adm.html');
+                //window.location.assign('https://celi.cefet-rj.br/coordenacao/atividades/adm.html');
             })
             .catch(error => {
                 console.error('Erro:', error);

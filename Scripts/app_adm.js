@@ -24,7 +24,14 @@ async function detalharAtividadeId(){
         limit: localStorage.getItem('limit'),
         activity: localStorage.getItem('activity'),
         startDate: localStorage.getItem('startDate'),
-        endDate: localStorage.getItem('endDate')
+        endDate: localStorage.getItem('endDate'),
+
+	objetivo: localStorage.getItem('objetivo'),
+        plubAlvo: localStorage.getItem('publico_alvo'),
+        categoria: localStorage.getItem('categoria'),
+        linhaExt: localStorage.getItem('linha_extensao'),
+        endereco: localStorage.getItem('endereco'),
+        bairro: localStorage.getItem('bairro')
     }
 
     //Publicar a atividade via aba de "Detalhes"

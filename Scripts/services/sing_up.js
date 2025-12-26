@@ -5,11 +5,18 @@ formSignUp.addEventListener('submit', async (event) => {
 
     const formData = new FormData(formSignUp);
     const data = Object.fromEntries(formData);
+
+    if(data.password !== data.password_confirmation){
+        alert('As senhas não conferem. Por favor, tente novamente.')
+        return;
+    } 
+
     const jsonData = JSON.stringify(data);
 
     try {
         // Primeira requisição para criar o usuário
-        const response1 = await fetch('https://celi.cefet-rj.br/coordenacao/api/user', {
+	const response1 = await fetch('https://celi.cefet-rj.br/eventos-testes/api/user', {
+        //const response1 = await fetch('https://celi.cefet-rj.br/coordenacao/api/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -25,11 +32,13 @@ formSignUp.addEventListener('submit', async (event) => {
 
         // Remover a propriedade "nome" do objeto "data" antes de enviar novamente
         delete data.name;
+	delete data.password_confirmation;
         const updatedJsonData = JSON.stringify(data); // Criar uma nova string JSON
         console.log(updatedJsonData);
 
         // Segunda requisição para fazer login
-        const response2 = await fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
+	const response2 = await fetch('https://celi.cefet-rj.br/eventos-testes/api/teste_login', {
+        //const response2 = await fetch('https://celi.cefet-rj.br/coordenacao/api/teste_login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,7 +55,8 @@ formSignUp.addEventListener('submit', async (event) => {
         localStorage.setItem('chave', data2.token);
         localStorage.setItem('id_user', data2.user_id);
         // Redirecionar ou realizar outra ação
-        window.location.assign('https://celi.cefet-rj.br/coordenacao/');
+	window.location.assign('https://celi.cefet-rj.br/eventos-testes/');
+        //window.location.assign('https://celi.cefet-rj.br/coordenacao/');
     } catch (error) {
         console.error('Erro:', error);
         alert('Erro ao fazer login. Verifique suas credenciais.');
