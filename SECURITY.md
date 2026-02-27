@@ -1,8 +1,8 @@
 # Security Policy
 
-## 🔐 How to Contribute to the CELi event system's Security
+## 🔐 How to Contribute to the CELi App system's Security
 
-You can help improve the security of the front-end of **CELi event** project by analyzing the code during the design phase, running a local instance on your computer, or using the public test server.
+You can help improve the security of the front-end of **CELi App** project by analyzing the code during the design phase, running a local instance on your computer, or using the public test server.
 
 🚨Please do not submit vulnerabilities through other means like VulnDB plataform. Our vulnerability disclosure policy is fully centered on GitHub Advisory.🚨
 
@@ -10,7 +10,7 @@ You can help improve the security of the front-end of **CELi event** project by 
 
 ### 🧠 Design-Time Analysis
 
-To test WeGIA’s code during the design phase, clone the repository and use static analysis tools. Here are some suggestions:
+To test CELi App’s code during the design phase, clone the repository and use static analysis tools. Here are some suggestions:
 
 - **Installation procedure**
 
@@ -67,4 +67,4 @@ Please include the following details if possible:
 
 ---
 
-**Thank you for helping to keep WeGIA secure.**
+**Thank you for helping to keep the software secure.**
